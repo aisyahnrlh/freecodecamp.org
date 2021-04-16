@@ -1,0 +1,19 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif
+}
+
+main#main {
+    text-align: center;
+}
+
+figure#img-div {
+    width: 40vw;
+    margin: auto;
+}
+
+#img-div #image{
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}

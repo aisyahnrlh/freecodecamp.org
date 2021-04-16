@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, a {
+    font-family: Verdana,sans-serif;
+    color: black;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+div#nav-top {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 0 20px;
+}
+
+div#nav-top ul:nth-child(1n+2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div#nav-top ul:nth-child(2) {
+    width: 40%;
+} 
+
+div#nav-top ul:nth-child(3) {
+    width: 10%;
+}
+
+div#nav-top ul {
+    list-style: none;
+}
+
+div#nav-top ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 0;
+    z-index: 2;
+}
+ 
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:white;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+}
+
+/* ukuran tablet */
+@media screen and (max-width: 992px) {
+    div#nav-top ul:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    div#nav-top ul:nth-child(2) {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        width: 100%;
+        height: 30vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        background-color: #f1f1f1;
+        transform: translateY(-121%);
+        transition: all .5s;
+    }
+
+    div#nav-top ul:nth-child(2) li a {
+        color: black;
+    }
+
+    div#nav-top ul:nth-child(2).slide {
+        transform: translateY(0%);
+    }
+}
+
+nav#navbar {
+    display: block;
+    position: fixed;
+    top: 24px;
+    padding: 0.01em 16px;
+    height: 100vh;
+    width: 220px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+
+nav#navbar header {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+nav#navbar ul li {
+    list-style: none;
+}
+
+nav#navbar ul li:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+nav#navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    margin: 26px 0 !important;
+}
+
+main#main-doc {
+    margin: 50px 20px 50px 310px;
+    z-index: -1;
+}
+
+main#main-doc header {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+main#main-doc article p {
+    margin: 5px 0;
+    text-align: justify;
+}
+
+main#main-doc article code {
+    display: block;
+    padding: 10px 10px;
+    background-color: #f7f7f7;
+}
+
+
+@media screen and (max-width: 992px) {
+    nav#navbar {
+        display: none;
+    }
+
+    main#main-doc {
+        margin: 50px;
+    }
+}

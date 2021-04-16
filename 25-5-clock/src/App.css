@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+#session-label,
+#break-label {
+  margin-bottom: 1rem;
+}
+
+#break-increment,
+#break-decrement,
+#session-decrement,
+#session-increment {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+#session-length,
+#break-length {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.base-timer {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  stroke: #F77070;
+  fill: #151932;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  font-weight: 600;
+}
+
+#time-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer-label {
+  font-size: 1rem;
+}
+
+#start_stop,
+#reset {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
